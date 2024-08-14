@@ -1,14 +1,13 @@
 "use client";
 
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import About from '@/components/about';
 import Experience from '@/components/experience';
 import Projects from '@/components/projects';
 import Footer from '@/components/footer';
+import GradientBackground from '@/components/gradientBackground';
 
 export default function Home() {
-  const [showSplash, setShowSplash] = useState(true);
-
   useEffect(() => {
     // Scroll to the top on page load or refresh
     window.scrollTo(0, 0);
@@ -43,17 +42,10 @@ export default function Home() {
     }
   },[])
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowSplash(false);
-    }, 3000); // Duration for the splash screen
-
-    return () => clearTimeout(timer);
-  }, []);
-  
   return (
-    <div className="transition ease-in-out delay-150 relative">
-      <div className="fixed inset-0 z-30 transition duration-300 lg:absolute">
+    <>
+    <GradientBackground />
+      <div className="transition ease-in-out delay-150 relative z-[1]">
         <div className="mx-auto min-h-screen max-w-screen-xl px-6 py-12 font-sans md:px-12 md:py-20 lg:px-24 lg:py-0">
           <a
             href="#content"
@@ -212,6 +204,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
