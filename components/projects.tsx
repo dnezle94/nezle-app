@@ -13,8 +13,8 @@ interface ProjectItem {
 
 const items: ProjectItem[] = [
   {
-    name: "site.com",
-    website: "site.com",
+    name: "https://nezlefe.com",
+    website: "https://nezlefe.com",
     preview: "/portfolio-preview.png",
     description: `
     A portfolio site build with Next.js and deployed with Vercel.
