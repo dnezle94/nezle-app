@@ -60,7 +60,6 @@ const items: ExperienceItem[] = [
       "Material UI",
       "Redux",
       "Redux Toolkit",
-      "Jotai",
       "Ant Design",
       "Tailwind CSS",
       "Codex",
