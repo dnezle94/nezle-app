@@ -60,10 +60,10 @@ export default function Home() {
                   <a href="/">Nezle Fe Doncillo</a>
                 </h1>
                 <h2 className="mt-3 text-lg font-medium tracking-tight text-slate-200 sm:text-xl">
-                  Frontend Engineer
+                  Full Stack Engineer
                 </h2>
                 <p className="mt-4 max-w-xs leading-normal">
-                  Expert in crafting responsive, accessible designs that enhance user experience.
+                  Building scalable web applications with TypeScript, React, Vue.js, Next.js, Node.js, and modern cloud technologies.
                 </p>
                 <nav
                   className="nav hidden lg:block"

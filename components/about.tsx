@@ -12,16 +12,10 @@ export default function About() {
       </div>
       <div>
         <p className="mb-4">
-          As a passionate and skilled Front-End Developer with years of experience, I specialize in creating user-centric web 
-          applications and interfaces. My expertise spans HTML, CSS, and JavaScript, as well as modern front-end frameworks like React 
-          and Vue. I am adept at translating design mockups into fully functional web pages, ensuring they are visually appealing and 
-          optimized for performance.
+          Software Engineer with 5+ years of experience building web applications using JavaScript, TypeScript, React, Vue.js, and Node.js. Experienced in developing API-driven systems, integrating REST services, working with JSON-based configurations, and building maintainable, scalable applications. Skilled in leveraging AI-assisted development tools such as GitHub Copilot, ChatGPT, and Codex to accelerate delivery while maintaining code quality, debugging ownership, and engineering best practices. 
         </p>
-        <p>
-          I possess a strong understanding of responsive design principles, cross-browser compatibility, and web accessibility standards. 
-          My focus is on delivering seamless user experiences across all devices and browsers, while adhering to best practices in 
-          accessibility to ensure inclusivity. This blend of technical skills and user-focused design enables me to contribute 
-          effectively to diverse and dynamic web projects.
+        <p className="mb-4">
+          Passionate about creating user-friendly, accessible, and responsive web applications that provide seamless experiences across devices. Committed to continuous learning and staying up-to-date with the latest technologies and industry trends.
         </p>
       </div>
     </section>

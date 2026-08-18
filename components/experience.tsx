@@ -12,6 +12,7 @@ interface ExperienceItem {
   company: string;
   description: string;
   technologies: string[];
+  responsibilities: string[];
   projectLinks?: {
     link: string;
     name: string;
@@ -21,17 +22,33 @@ interface ExperienceItem {
 const items: ExperienceItem[] = [
   {
     yearFrom: 2018,
-    yearTo: 2024,
+    yearTo: 2026,
     position: "Frontend Engineer",
-    company: "Future Tranz. Solution Inc.",
+    company: "DevXSupport Services (formerly Future Tranz Solution Inc.)",
     website: "",
     description: `
-    Build and maintain components. Work closely with cross-functional teams, including developers, designers, and
-    product managers, to design and implement best practices in web developement. Additionally, I focused on 
-    building user interfaces, conducting thorough testing and debugging to deliver high-quality, efficient web pages. 
-    My contributions were key to several successful projects, including a CRM interface and a sales and inventory 
-    management system, which were well-received for their functionality and design alignment.
+    Frontend Engineer with extensive experience developing, modernizing, and maintaining business 
+    applications using JavaScript, TypeScript, React, Vue.js, and Node.js. Worked across 
+    frontend architecture, API integration, state management, workflow-driven applications, 
+    reusable component systems, and application performance.
     `,
+    responsibilities: [
+      "Developed and maintained scalable, production-ready web applications using JavaScript, TypeScript, React, Vue.js, and Node.js across multiple business domains.",
+      "Designed and implemented reusable UI components, application modules, and interactive workflows to improve consistency, maintainability, and development efficiency.",
+      "Integrated REST APIs, transforming, validating, and managing JSON data from multiple backend services.",
+      "Implemented complex client-side state management using Redux Toolkit, Redux, Vuex, and Zustand, supporting data-intensive and workflow-driven applications.",
+      "Developed metadata-driven and configuration-based user interfaces using structured JSON configuration to support dynamic application behavior and reusable business workflows.",
+      "Collaborated with backend engineers and stakeholders to define API contracts, data requirements, application workflows, and integration strategies.",
+      "Modernized and refactored existing applications and legacy codebases to improve code quality, reusability, maintainability, performance, and scalability.",
+      "Investigated and resolved complex frontend, API integration, dependency, build, and runtime issues across development and production environments.",
+      "Applied modern development practices using TypeScript, component-based architecture, modular design, and reusable engineering patterns.",
+      "Worked with frontend frameworks and UI ecosystems including React, Next.js, Vue.js, Tailwind CSS, Material UI, Ant Design, BootstrapVue, and Styled Components.",
+      "Contributed to application authentication and authorization workflows involving OAuth2, JWT, and third-party authentication services.",
+      "Participated in code reviews, technical discussions, requirements analysis, documentation, and engineering standards to improve overall software quality.",
+      "Optimized application performance through improvements to component rendering, state management, API usage, bundle configuration, and frontend architecture.",
+      "Collaborated in Agile development environments with developers, QA engineers, product owners, and other stakeholders to deliver features and resolve technical issues.",
+      "Leveraged AI-assisted development tools including GitHub Copilot, ChatGPT, and OpenAI Codex for code generation, refactoring, debugging, documentation, test development, and development workflow optimization."
+    ],
     technologies: [
       "JavaScript",
       "TypeScript",
@@ -44,9 +61,18 @@ const items: ExperienceItem[] = [
       "Redux",
       "Redux Toolkit",
       "Jotai",
-      "Ant Design UI",
+      "Ant Design",
+      "Tailwind CSS",
+      "Codex",
+      "Github Copilot",
+      "Git",
+      "GitHub",
+      "Postman",
       "Styled Components",
-      "Auth0"
+      "Auth0",
+      "REST APIs",
+      "Docker",
+      "Vite"
     ],
     projectLinks: [
       {
@@ -68,6 +94,49 @@ const items: ExperienceItem[] = [
     ]
   },
   {
+    yearFrom: 2024,
+    yearTo: 2025,
+    position: "Software Engineer",
+    company: "MID-Construction Group",
+    website: "https://midconstruction.com/",
+    description: `
+    Developed workflow-driven business applications using React and TypeScript, focusing on configurable, metadata-driven interfaces and business process automation.
+    `,
+    responsibilities: [
+      "Developed workflow-driven business applications using React and TypeScript.",
+      "Built configurable, metadata-driven interfaces powered by structured metadata and JSON-based application configurations.",
+      "Integrated REST APIs and managed complex client-side state to support business process automation and dynamic workflows.",
+      "Implemented event-driven UI interactions and browser-based workflows to streamline operational processes and improve user efficiency.",
+      "Translated business requirements into maintainable, production-ready features in collaboration with product owners and stakeholders.",
+      "Maintained technical documentation, implementation guides, and coding standards to support consistency and maintainability.",
+      "Participated in Agile ceremonies, sprint planning, backlog refinement, and peer code reviews.",
+      "Applied reusable frontend development patterns and TypeScript practices to improve code quality, maintainability, and scalability."
+    ],
+    technologies: [
+      "React", 
+      "TypeScript", 
+      "Metadata-Driven Applications", 
+      "JSON Configuration", 
+      "REST APIs", 
+      "Event-Driven UI",
+      "CI/CD", 
+      "Material UI", 
+      "TanStack", 
+      "Zustand", 
+      "Figma", 
+      "Git", 
+      "Bitbucket", 
+      "Next.js", 
+      "Node.js", 
+      "Express"],
+    projectLinks: [
+      {
+        name: "Projectler",
+        link: "https://app.projectler.com/"
+      }
+    ]
+  },
+  {
     yearFrom: 2022,
     yearTo: 2022,
     position: "UI Engineer",
@@ -77,7 +146,8 @@ const items: ExperienceItem[] = [
     Collaborated closely with the designer and other engineers, interpret design mockups, design websites for 
     organization in the community.
     `,
-    technologies: ["JavaScript", "HTML & SCSS", "React"],
+    responsibilities: [],
+    technologies: ["JavaScript", "TypeScript", "HTML & SCSS", "React", "Figma"],
     projectLinks: [
       {
         link: "https://pycon.asia/",
@@ -135,6 +205,24 @@ export default function Experience() {
                   <p className="mt-2 text-sm leading-normal">
                     {item.description}
                   </p>
+                  {item.responsibilities.length > 0 && (
+                    <ul
+                      className="mt-2 flex flex-wrap"
+                      aria-label="Responsibilities"
+                    >
+                      {item.responsibilities.map((resp, idx) => (
+                        <li key={idx} className="mr-1.5 mt-2 flex items-start">
+                          <span className="mr-3 ml-3 mt-2 flex items-center">
+                            <span className="h-1.5 w-1.5 rounded-full bg-teal-300" />
+                          </span>
+                          <p className="text-sm leading-normal text-slate-400">
+                            {resp}
+                          </p>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+
                   {item.projectLinks ? (
                     <ul
                       className="mt-2 flex flex-wrap"
